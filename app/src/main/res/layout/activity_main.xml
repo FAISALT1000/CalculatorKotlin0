@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/minus_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/divided_Btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/plus_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/multiplied_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/minus_Btn"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/num2TextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:ems="6"
+        android:hint="ANY NUMBER"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/num1TextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:textColorHint="@color/cardview_dark_background"
+        tools:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/num1TextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:ems="6"
+        android:hint="ANY NUMBER"
+        android:inputType="number"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/num2TextNumber2"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColorHint="@color/cardview_dark_background"
+        tools:textSize="20sp" />
+
+    <Button
+        android:id="@+id/divided_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="÷"
+        app:layout_constraintBottom_toTopOf="@+id/result_TextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/multiplied_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="384dp"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:text="×"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divided_Btn"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/result_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplied_Btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
